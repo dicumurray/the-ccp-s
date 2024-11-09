@@ -5,7 +5,8 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    overflow: hidden;
+    overflow: hidden; /* Previene el desbordamiento en pantallas pequeñas */
+    padding: 0 10px; /* Añadir un poco de padding para evitar el corte del texto */
 }
 
 .logo-text {
@@ -19,33 +20,26 @@ body {
     display: inline-block;
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
     text-align: center; /* Centrado del texto */
-}
-
-/* Asegúrate de que el contenedor del logo permita suficiente espacio */
-.logo-container {
-    display: flex;
-    justify-content: center; /* Centra el logo horizontalmente */
-    align-items: center; /* Alinea el logo verticalmente si es necesario */
-    max-width: 100%; /* Permite que el logo use todo el ancho disponible */
-    overflow: hidden; /* Oculta cualquier desbordamiento */
-    padding: 10px; /* Espaciado interno para mejorar la apariencia */
+    max-width: 100%; /* Asegura que no se desborde */
+    overflow: hidden; /* Asegura que el texto no se salga del contenedor */
 }
 
 /* Media query para pantallas más pequeñas */
 @media (max-width: 600px) {
     .logo-text {
-        font-size: 12vw; /* Ajusta el tamaño de la fuente en pantallas más pequeñas */
+        font-size: 12vw; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+        white-space: normal; /* Permite que el texto se ajuste a varias líneas si es necesario */
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
     .logo-text {
-        font-size: 14vw; /* Ajuste adicional para pantallas aún más pequeñas */
+        font-size: 15vw; /* Ajuste para pantallas muy pequeñas */
     }
 }
 
-/* Animación de onda */
-@keyframes wave {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+@media (max-width: 300px) {
+    .logo-text {
+        font-size: 18vw; /* Asegura que el texto no se corte en pantallas ultra pequeñas */
+    }
 }
