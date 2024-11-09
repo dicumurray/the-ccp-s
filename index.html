@@ -29,7 +29,7 @@
             white-space: nowrap; /* Evitar que el texto se divida */
             max-width: 100%; /* Prevenir que el texto se desborde */
             text-align: center; /* Centrado del texto */
-            padding: 0 10px; /* Un poco de espacio interno */
+            padding: 0 5%; /* Un poco de espacio a los costados */
             box-sizing: border-box; /* Asegurar que el padding no afecte el tamaño del texto */
         }
 
@@ -37,12 +37,14 @@
         @media (max-width: 800px) {
             .logo-text {
                 font-size: 12vw; /* Ajuste de tamaño en pantallas más pequeñas */
+                padding: 0 10%; /* Añadir más margen a los costados en pantallas más pequeñas */
             }
         }
 
         @media (max-width: 500px) {
             .logo-text {
                 font-size: 16vw; /* Ajuste para pantallas muy pequeñas */
+                padding: 0 15%; /* Aumentar aún más el margen */
             }
         }
 
@@ -84,4 +86,5 @@
             });
         });
     </script>
-</b
+</body>
+</html>
