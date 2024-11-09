@@ -14,11 +14,12 @@
             height: 100vh;
             margin: 0;
             overflow: hidden;
+            width: 100%; /* Asegura que el ancho ocupe toda la pantalla */
         }
 
         .logo-text {
             font-family: 'Verdana', sans-serif; /* Fuente base */
-            font-size: 10vw; /* Ajuste inicial del tamaño del texto con unidades vw */
+            font-size: 10vw; /* Tamaño inicial del texto con unidades vw */
             color: #FFD700; /* Color dorado */
             text-shadow: 3px 3px 0 #FF4500, 6px 6px 0 #800080, 9px 9px 0 #000080; /* Sombras psicodélicas */
             transform: rotate(-5deg); /* Rotación ligera para dinamismo */
@@ -26,24 +27,24 @@
             text-transform: uppercase; /* Texto en mayúsculas */
             display: inline-block;
             white-space: nowrap; /* Evitar que el texto se divida */
-            max-width: 90%; /* Prevenir que el texto se desborde por los bordes */
             text-align: center; /* Centrado del texto */
-            padding: 0 10%; /* Añadir un poco de espacio a los costados */
-            box-sizing: border-box; /* Asegurar que el padding no afecte el tamaño del texto */
+            padding: 0 5%; /* Margen horizontal de 5% en ambos lados */
+            box-sizing: border-box; /* Para que el padding no afecte el tamaño del texto */
+            max-width: 100%; /* Asegura que el texto no se extienda más allá del 100% */
         }
 
         /* Media queries para pantallas más pequeñas */
         @media (max-width: 800px) {
             .logo-text {
                 font-size: 12vw; /* Ajuste de tamaño en pantallas medianas */
-                padding: 0 10%; /* Asegura que haya margen en los costados */
+                padding: 0 8%; /* Margen horizontal de 8% */
             }
         }
 
         @media (max-width: 500px) {
             .logo-text {
                 font-size: 15vw; /* Ajuste para pantallas muy pequeñas */
-                padding: 0 15%; /* Aumentar el margen para que no quede tan pegado */
+                padding: 0 10%; /* Margen horizontal de 10% */
             }
         }
 
@@ -79,11 +80,4 @@
                 }
 
                 span.style.display = 'inline-block';
-                span.style.animation = `wave 2s ease-in-out infinite`;
-                span.style.animationDelay = `${index * 0.1}s`;
-                text.appendChild(span);
-            });
-        });
-    </script>
-</body>
-</html>
+                
