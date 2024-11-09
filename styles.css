@@ -18,3 +18,35 @@ body {
     text-transform: uppercase; /* Texto en mayúsculas */
     display: inline-block;
 }
+/* Asegúrate de que el contenedor del logo permita suficiente espacio */
+.logo-container {
+    display: flex;
+    justify-content: center; /* Centra el logo horizontalmente */
+    align-items: center; /* Alinea el logo verticalmente si es necesario */
+    max-width: 100%; /* Permite que el logo use todo el ancho disponible */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    padding: 10px; /* Espaciado interno para mejorar la apariencia */
+  }
+  
+/* Estilos generales */
+.logo {
+    font-family: 'TangoPsicodelic', sans-serif; /* Usa tu tipografía */
+    font-size: 8vw; /* Tamaño dinámico basado en el ancho de la pantalla */
+    text-align: center;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    margin: 0 auto; /* Centra el logo */
+    line-height: 1.2; /* Espaciado entre líneas si es necesario */
+  }  
+  /* Media query para pantallas más pequeñas */
+  @media (max-width: 600px) {
+    .logo {
+      font-size: 36px; /* Reduce el tamaño de la fuente para móviles */
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .logo {
+      font-size: 28px; /* Ajusta aún más para pantallas muy pequeñas */
+    }
+  }
+  
