@@ -10,13 +10,15 @@ body {
 
 .logo-text {
     font-family: 'Verdana', sans-serif; /* Usa una fuente base */
-    font-size: 80px;
+    font-size: 8vw; /* Tamaño dinámico basado en el ancho de la pantalla */
     color: #FFD700; /* Color dorado */
     text-shadow: 3px 3px 0 #FF4500, 6px 6px 0 #800080, 9px 9px 0 #000080; /* Sombras para efecto psicodélico */
     transform: rotate(-5deg); /* Rotación ligera para un toque de dinamismo */
     letter-spacing: 5px; /* Espaciado de letras */
     text-transform: uppercase; /* Texto en mayúsculas */
     display: inline-block;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    text-align: center; /* Centrado del texto */
 }
 
 /* Asegúrate de que el contenedor del logo permita suficiente espacio */
@@ -27,24 +29,23 @@ body {
     max-width: 100%; /* Permite que el logo use todo el ancho disponible */
     overflow: hidden; /* Oculta cualquier desbordamiento */
     padding: 10px; /* Espaciado interno para mejorar la apariencia */
-  
 }
 
-/* Estilos generales */
-.logo {
-    font-family: 'TangoPsicodelic', sans-serif; /* Usa tu tipografía */
-    font-size: 8vw; /* Tamaño dinámico basado en el ancho de la pantalla */
-    text-align: center;
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-    margin: 0 auto; /* Centra el logo */
-    line-height: 1.2; /* Espaciado entre líneas si es necesario */
-  }
-
-  /* Media query para pantallas más pequeñas */
-  @media (max-width: 500px) {
-    .logo {
-      font-size: 6vw; 
-  /* Reduce más el tamaño en pantallas pequeñas */
+/* Media query para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .logo-text {
+        font-size: 12vw; /* Ajusta el tamaño de la fuente en pantallas más pequeñas */
     }
-  }
-  
+}
+
+@media (max-width: 500px) {
+    .logo-text {
+        font-size: 14vw; /* Ajuste adicional para pantallas aún más pequeñas */
+    }
+}
+
+/* Animación de onda */
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}

@@ -19,13 +19,3 @@ document.addEventListener('DOMContentLoaded', () => {
         text.appendChild(span);
     });
 });
-
-// CSS Animations
-const style = document.createElement('style');
-style.innerHTML = `
-@keyframes wave {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-`;
-document.head.appendChild(style);
