@@ -6,6 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The CCCP'S Logo</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #000; /* Fondo negro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Evita que el contenido se desborde */
+            padding: 0 10px; /* Agrega espacio alrededor */
+        }
+
+        .logo-text {
+            font-family: 'Verdana', sans-serif; /* Fuente base */
+            font-size: 8vw; /* Tamaño dinámico, ajustado a un máximo razonable */
+            color: #FFD700; /* Color dorado */
+            text-shadow: 3px 3px 0 #FF4500, 6px 6px 0 #800080, 9px 9px 0 #000080; /* Sombras psicodélicas */
+            transform: rotate(-5deg); /* Rotación ligera para dinamismo */
+            letter-spacing: 5px; /* Espaciado de letras */
+            text-transform: uppercase; /* Texto en mayúsculas */
+            display: inline-block;
+            white-space: nowrap; /* Evitar que el texto se divida */
+            text-align: center; /* Alineación central */
+            max-width: 100%; /* No desbordar el contenedor */
+            overflow: hidden; /* Para prevenir el desbordamiento */
+        }
+
+        /* Media queries para pantallas pequeñas */
+        @media (max-width: 600px) {
+            .logo-text {
+                font-size: 14vw; /* Ajusta el tamaño de la fuente */
+            }
+        }
+
+        @media (max-width: 400px) {
+            .logo-text {
+                font-size: 20vw; /* Ajuste más pequeño */
+            }
+        }
+
+        @media (max-width: 300px) {
+            .logo-text {
+                font-size: 22vw; /* Asegura que el texto no se corte */
+            }
+        }
+
+        /* Animación de onda */
+        @keyframes wave {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Estilo para los span de cada letra */
+        .logo-text span {
+            display: inline-block;
+            animation: wave 2s ease-in-out infinite;
+        }
+    </style>
 </head>
 <body>
     <div class="logo-text" id="logoText">The CCCP'S</div>
