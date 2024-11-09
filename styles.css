@@ -1,0 +1,20 @@
+body {
+    background-color: #000; /* Fondo negro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.logo-text {
+    font-family: 'Verdana', sans-serif; /* Usa una fuente base */
+    font-size: 80px;
+    color: #FFD700; /* Color dorado */
+    text-shadow: 3px 3px 0 #FF4500, 6px 6px 0 #800080, 9px 9px 0 #000080; /* Sombras para efecto psicodélico */
+    transform: rotate(-5deg); /* Rotación ligera para un toque de dinamismo */
+    letter-spacing: 5px; /* Espaciado de letras */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    display: inline-block;
+}
