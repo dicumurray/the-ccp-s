@@ -43,7 +43,7 @@ body {
   /* Media query para pantallas más pequeñas */
   @media (max-width: 500px) {
     .logo {
-      font-size: 2vw; 
+      font-size: 6vw; 
   /* Reduce más el tamaño en pantallas pequeñas */
     }
   }
