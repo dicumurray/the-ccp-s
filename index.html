@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The CCCP'S Logo</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             background-color: #000; /* Fondo negro */
@@ -14,13 +13,13 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            padding: 0 10px; /* Espacio alrededor */
+            padding: 0; /* Quitar cualquier margen adicional */
             overflow: hidden;
         }
 
         .logo-text {
             font-family: 'Verdana', sans-serif; /* Fuente base */
-            font-size: 8vw; /* Tamaño dinámico */
+            font-size: 10vw; /* Ajuste del tamaño del texto con unidades vw */
             color: #FFD700; /* Color dorado */
             text-shadow: 3px 3px 0 #FF4500, 6px 6px 0 #800080, 9px 9px 0 #000080; /* Sombras psicodélicas */
             transform: rotate(-5deg); /* Rotación ligera para dinamismo */
@@ -28,27 +27,22 @@
             text-transform: uppercase; /* Texto en mayúsculas */
             display: inline-block;
             white-space: nowrap; /* Evitar que el texto se divida */
-            text-align: center; /* Alineación central */
-            max-width: 100%; /* Evitar que el texto se desborde */
-            overflow: hidden; /* Prevenir desbordamiento */
+            max-width: 100%; /* Prevenir que el texto se desborde */
+            text-align: center; /* Centrado del texto */
+            padding: 0 10px; /* Un poco de espacio interno */
+            box-sizing: border-box; /* Asegurar que el padding no afecte el tamaño del texto */
         }
 
         /* Media queries para pantallas más pequeñas */
-        @media (max-width: 600px) {
+        @media (max-width: 800px) {
             .logo-text {
-                font-size: 14vw; /* Ajuste de tamaño en pantallas más pequeñas */
+                font-size: 12vw; /* Ajuste de tamaño en pantallas más pequeñas */
             }
         }
 
-        @media (max-width: 400px) {
+        @media (max-width: 500px) {
             .logo-text {
-                font-size: 18vw; /* Ajuste aún más pequeño */
-            }
-        }
-
-        @media (max-width: 300px) {
-            .logo-text {
-                font-size: 22vw; /* Ajuste para pantallas muy pequeñas */
+                font-size: 16vw; /* Ajuste para pantallas muy pequeñas */
             }
         }
 
@@ -62,10 +56,32 @@
             display: inline-block;
             animation: wave 2s ease-in-out infinite;
         }
+
     </style>
 </head>
 <body>
     <div class="logo-text" id="logoText">The CCCP'S</div>
-    <script src="script.js"></script>
-</body>
-</html>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const text = document.getElementById('logoText');
+            const textContent = text.textContent;
+            text.innerHTML = ''; // Limpiar el contenido original del texto
+
+            // Crear un efecto de onda en cada letra
+            textContent.split('').forEach((char, index) => {
+                const span = document.createElement('span');
+                span.textContent = char;
+
+                // Si el carácter es un espacio, manejarlo adecuadamente
+                if (char === ' ') {
+                    span.style.width = '10px'; // Ajustar el ancho del espacio según sea necesario
+                }
+
+                span.style.display = 'inline-block';
+                span.style.animation = `wave 2s ease-in-out infinite`;
+                span.style.animationDelay = `${index * 0.1}s`;
+                text.appendChild(span);
+            });
+        });
+    </script>
+</b
