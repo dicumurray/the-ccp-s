@@ -5,41 +5,44 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    overflow: hidden; /* Previene el desbordamiento en pantallas pequeñas */
-    padding: 0 10px; /* Añadir un poco de padding para evitar el corte del texto */
+    overflow: hidden; /* Evita que el contenido se desborde */
+    padding: 0 10px; /* Agrega espacio alrededor */
 }
 
 .logo-text {
-    font-family: 'Verdana', sans-serif; /* Usa una fuente base */
-    font-size: 8vw; /* Tamaño dinámico basado en el ancho de la pantalla */
+    font-family: 'Verdana', sans-serif; /* Fuente base */
+    font-size: 8vw; /* Tamaño dinámico, ajustado a un máximo razonable */
     color: #FFD700; /* Color dorado */
-    text-shadow: 3px 3px 0 #FF4500, 6px 6px 0 #800080, 9px 9px 0 #000080; /* Sombras para efecto psicodélico */
-    transform: rotate(-5deg); /* Rotación ligera para un toque de dinamismo */
+    text-shadow: 3px 3px 0 #FF4500, 6px 6px 0 #800080, 9px 9px 0 #000080; /* Sombras psicodélicas */
+    transform: rotate(-5deg); /* Rotación ligera para dinamismo */
     letter-spacing: 5px; /* Espaciado de letras */
     text-transform: uppercase; /* Texto en mayúsculas */
     display: inline-block;
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-    text-align: center; /* Centrado del texto */
-    max-width: 100%; /* Asegura que no se desborde */
-    overflow: hidden; /* Asegura que el texto no se salga del contenedor */
+    white-space: nowrap; /* Evitar que el texto se divida */
+    text-align: center; /* Alineación central */
+    max-width: 100%; /* No desbordar el contenedor */
+    overflow: hidden; /* Para prevenir el desbordamiento */
 }
 
-/* Media query para pantallas más pequeñas */
+/* Media queries para pantallas pequeñas */
+
+/* Para pantallas más pequeñas, reducimos el tamaño de la fuente */
 @media (max-width: 600px) {
     .logo-text {
-        font-size: 12vw; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
-        white-space: normal; /* Permite que el texto se ajuste a varias líneas si es necesario */
+        font-size: 14vw; /* Ajusta el tamaño de la fuente */
     }
 }
 
+/* Pantallas aún más pequeñas */
 @media (max-width: 400px) {
     .logo-text {
-        font-size: 15vw; /* Ajuste para pantallas muy pequeñas */
+        font-size: 20vw; /* Ajuste más pequeño */
     }
 }
 
+/* Pantallas ultra pequeñas */
 @media (max-width: 300px) {
     .logo-text {
-        font-size: 18vw; /* Asegura que el texto no se corte en pantallas ultra pequeñas */
+        font-size: 22vw; /* Asegura que el texto no se corte */
     }
 }
